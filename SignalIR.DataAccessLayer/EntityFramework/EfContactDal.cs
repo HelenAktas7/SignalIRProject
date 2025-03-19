@@ -1,0 +1,19 @@
+﻿using SignalIR.DataAccessLayer.Abstract;
+using SignalIR.DataAccessLayer.Concrete;
+using SignalIR.DataAccessLayer.Repositories;
+using SignalIR_EntityLayer.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SignalIR.DataAccessLayer.EntityFramework
+{
+    public class EfContactDal : GenericRepository<Contact>, IContactDal
+    {
+        public EfContactDal(SignalIRContext context) : base(context)
+        {
+        }
+    }
+}
