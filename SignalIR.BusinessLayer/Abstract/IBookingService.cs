@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SignalIR.BusinessLayer.Abstract
 {
-    internal interface IBookingService:IGenericService<Booking>
+    public interface IBookingService:IGenericService<Booking>
     {
     }
 }

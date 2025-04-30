@@ -12,6 +12,6 @@ namespace SignalIR.DtoLayer.ProductDto
         public string Description { get; set; }
         public decimal Price { get; set; }
         public string Imageurl { get; set; }
-        public bool PorductStatus { get; set; }
+        public bool ProductStatus { get; set; }
     }
 }

@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace SignalIR.BusinessLayer.Concrete
 {
-    public class ContactManger : IContactService
+    public class ContactManager : IContactService
     {
         private readonly IContactDal _contactDal;
 
-        public ContactManger(IContactDal contactDal)
+        public ContactManager(IContactDal contactDal)
         {
             _contactDal = contactDal;
         }

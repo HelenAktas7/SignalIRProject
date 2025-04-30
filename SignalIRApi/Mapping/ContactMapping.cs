@@ -1,0 +1,19 @@
+﻿using AutoMapper;
+using SignalIR.DtoLayer.BookingDto;
+using SignalIR.DtoLayer.ContactDto;
+using SignalIR.Entity_Layer.Entities;
+using SignalIR_EntityLayer.Entities;
+
+namespace SignalIRApi.Mapping
+{
+    public class ContactMapping : Profile
+    {
+        public ContactMapping()
+        {
+            CreateMap<Contact, ResultContactDto>().ReverseMap();
+            CreateMap<Contact, CreateContactDto>().ReverseMap();
+            CreateMap<Contact, GetContactDto>().ReverseMap();
+            CreateMap<Contact, UpdateContactDto>().ReverseMap();
+        }
+    }
+}

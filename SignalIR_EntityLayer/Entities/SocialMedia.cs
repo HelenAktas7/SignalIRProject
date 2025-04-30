@@ -1,4 +1,4 @@
-﻿namespace SignalIR_EntityLayer.Entities
+﻿ namespace SignalIR_EntityLayer.Entities
 {
     public class SocialMedia
     {

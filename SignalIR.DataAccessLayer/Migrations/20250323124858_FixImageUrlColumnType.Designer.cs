@@ -12,8 +12,8 @@ using SignalIR.DataAccessLayer.Concrete;
 namespace SignalIR.DataAccessLayer.Migrations
 {
     [DbContext(typeof(SignalIRContext))]
-    [Migration("20250319181009_mig1")]
-    partial class mig1
+    [Migration("20250323124858_FixImageUrlColumnType")]
+    partial class FixImageUrlColumnType
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,14 +33,15 @@ namespace SignalIR.DataAccessLayer.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AboutID"));
 
-                    b.Property<int>("ImageUrl")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Title")
+                    b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("description")
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
